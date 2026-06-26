@@ -133,7 +133,7 @@
 <body class="bg-navy-950 text-slate-200 overflow-x-hidden selection:bg-cyan-500 selection:text-navy-950">
 
  <!-- KURSOR IKAN KUSTOM (Mengikuti gerakan mouse secara dinamis) -->
- <div id="fish-cursor" class="fixed w-10 h-10 pointer-events-none z-[9999] transition-transform duration-75 ease-out -translate-x-1/2 -translate-y-1/2 hidden md:block select-none">
+ <div id="fish-cursor" class="fixed w-10 h-10 pointer-events-none z-[9999] transition-transform duration-75 ease-out -translate-x-1/2 -translate-y-1/2 hidden select-none">
    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full filter drop-shadow-[0_0_8px_rgba(34,211,238,0.8)]">
      <path d="M10 50C25 35 55 30 75 45C83 40 90 35 95 38C92 48 92 52 95 62C90 65 83 60 75 55C55 70 25 65 10 50Z" fill="#22d3ee" />
      <path d="M10 50C5 40 2 43 0 45V55C2 57 5 60 10 50Z" fill="#06b6d4" />
@@ -214,7 +214,7 @@
 
  <!-- ABOUT ME & HOW/WHY WE WORK -->
  <section id="tentang-kami" class="reveal py-24 bg-navy-900/20 border-t border-white/5 relative overflow-hidden">
-   <div class="absolute top-1/2 left-0 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl pointer-events-none"></div>
+   <div class="absolute top-1/4 left-0 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl pointer-events-none"></div>
    <div class="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl pointer-events-none"></div>
 
    <div class="max-w-7xl mx-auto px-6 relative z-10">
@@ -248,6 +248,131 @@
              <div class="col-span-2 sm:col-span-1">
                <h4 class="text-2xl sm:text-3xl font-mono font-bold text-cyan-400">100%</h4>
                <p class="text-[10px] text-slate-400 uppercase tracking-widest mt-1">Donasi Tepat Sasaran</p>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+
+     <!-- INTEGRATED TRANSPARENCY SECTION -->
+     <div class="mt-32 pt-24 border-t border-white/5">
+       <div class="flex flex-col lg:flex-row gap-16 items-center">
+         <!-- Left: Live Impact Map/Log -->
+         <div class="lg:w-7/12 w-full order-2 lg:order-1">
+           <div class="relative group">
+             <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-[2.5rem] blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
+             <div class="relative bg-navy-900 border border-white/10 rounded-[2.5rem] overflow-hidden shadow-2xl">
+               <!-- Header Map -->
+               <div class="p-6 border-b border-white/5 bg-navy-950/50 flex justify-between items-center">
+                 <div class="flex items-center gap-3">
+                   <div class="w-3 h-3 rounded-full bg-red-500 animate-pulse"></div>
+                   <span class="font-mono text-xs text-slate-300 uppercase tracking-widest">Live Mission Log: Nusantara-1</span>
+                 </div>
+                 <span class="text-[10px] font-mono text-cyan-400">v2.4.0-Stable</span>
+               </div>
+
+               <!-- Content: Visual representation of a mission -->
+               <div class="relative h-[400px] bg-navy-950 overflow-hidden">
+                 <img src="https://images.unsplash.com/photo-1551244072-5d12893278ab?q=80&w=1200" class="w-full h-full object-cover opacity-30 grayscale" alt="Marine Map">
+
+                 <!-- Pulsing coordinate points -->
+                 <div class="absolute top-1/4 left-1/3 group/point">
+                   <div class="w-4 h-4 bg-cyan-400 rounded-full animate-ping opacity-75"></div>
+                   <div class="absolute inset-0 w-4 h-4 bg-cyan-400 rounded-full"></div>
+                   <div class="absolute top-6 left-1/2 -translate-x-1/2 w-32 bg-navy-900/90 backdrop-blur-md border border-cyan-400/30 p-2 rounded-lg opacity-0 group-hover/point:opacity-100 transition-opacity">
+                     <p class="text-[9px] font-bold text-white mb-1">Misi: Evakuasi Jaring</p>
+                     <p class="text-[8px] text-cyan-400">Status: Selesai (1.2 Ton)</p>
+                   </div>
+                 </div>
+
+                 <div class="absolute bottom-1/3 right-1/4 group/point">
+                   <div class="w-4 h-4 bg-gold-400 rounded-full animate-ping opacity-75"></div>
+                   <div class="absolute inset-0 w-4 h-4 bg-gold-400 rounded-full"></div>
+                   <div class="absolute top-6 left-1/2 -translate-x-1/2 w-32 bg-navy-900/90 backdrop-blur-md border border-gold-400/30 p-2 rounded-lg opacity-0 group-hover/point:opacity-100 transition-opacity">
+                     <p class="text-[9px] font-bold text-white mb-1">Misi: Patroli Sonar</p>
+                     <p class="text-[8px] text-gold-400">Status: Berlangsung...</p>
+                   </div>
+                 </div>
+
+                 <!-- Floating Info Overlay -->
+                 <div class="absolute bottom-6 left-6 right-6 p-4 bg-navy-900/80 backdrop-blur-md border border-white/10 rounded-2xl">
+                   <div class="grid grid-cols-3 gap-4 text-center">
+                     <div>
+                       <p class="text-[10px] text-slate-500 uppercase">Kedalaman</p>
+                       <p class="font-mono text-sm font-bold text-white">-45.2m</p>
+                     </div>
+                     <div>
+                       <p class="text-[10px] text-slate-500 uppercase">Suhu Air</p>
+                       <p class="font-mono text-sm font-bold text-white">26.8°C</p>
+                     </div>
+                     <div>
+                       <p class="text-[10px] text-slate-500 uppercase">Kandungan O2</p>
+                       <p class="font-mono text-sm font-bold text-cyan-400">Optimal</p>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+
+         <!-- Right: Partners & Certs -->
+         <div class="lg:w-5/12 w-full order-1 lg:order-2 space-y-8">
+           <div>
+             <span class="text-cyan-400 text-xs font-extrabold tracking-widest uppercase block mb-4">// LEGITIMASI OPERASIONAL</span>
+             <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white leading-tight mb-6">Transparansi Tanpa Kompromi</h2>
+             <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+               VML beroperasi dengan standar audit internasional. Setiap rupiah donasi dan setiap gram limbah yang diangkat tercatat dalam sistem log blockchain maritim kami yang dapat diakses oleh publik.
+             </p>
+           </div>
+
+           <div class="space-y-6">
+             <div class="flex items-center gap-4 group">
+               <div class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-cyan-400 text-xl group-hover:bg-cyan-400/20 group-hover:border-cyan-400/40 transition-all">
+                 <i class="fa-solid fa-shield-halved"></i>
+               </div>
+               <div>
+                 <h4 class="text-white font-bold text-sm">Sertifikasi ISO 14001:2015</h4>
+                 <p class="text-xs text-slate-500 italic">Standar Internasional Manajemen Lingkungan Maritim.</p>
+               </div>
+             </div>
+
+             <div class="flex items-center gap-4 group">
+               <div class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-cyan-400 text-xl group-hover:bg-cyan-400/20 group-hover:border-cyan-400/40 transition-all">
+                 <i class="fa-solid fa-handshake"></i>
+               </div>
+               <div>
+                 <h4 class="text-white font-bold text-sm">Mitra Strategis KKP RI</h4>
+                 <p class="text-xs text-slate-500 italic">Kolaborasi pemetaan zona kritis jaring hantu nasional.</p>
+               </div>
+             </div>
+
+             <div class="flex items-center gap-4 group">
+               <div class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-cyan-400 text-xl group-hover:bg-cyan-400/20 group-hover:border-cyan-400/40 transition-all">
+                 <i class="fa-solid fa-chart-line"></i>
+               </div>
+               <div>
+                 <h4 class="text-white font-bold text-sm">Audit Dampak Independen</h4>
+                 <p class="text-xs text-slate-500 italic">Laporan dampak bulanan oleh firma audit lingkungan pihak ketiga.</p>
+               </div>
+             </div>
+           </div>
+
+           <div class="pt-8 border-t border-white/5">
+             <p class="text-[10px] text-slate-500 uppercase tracking-widest mb-6">Mitra & Aliansi Kami:</p>
+             <div class="grid grid-cols-3 gap-8 opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
+               <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-water text-2xl text-white"></i>
+                  <span class="text-[10px] font-bold text-white">KKP RI</span>
+               </div>
+               <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-fish-fins text-2xl text-white"></i>
+                  <span class="text-[10px] font-bold text-white">WWF ID</span>
+               </div>
+               <div class="flex items-center gap-2">
+                  <i class="fa-solid fa-leaf text-2xl text-white"></i>
+                  <span class="text-[10px] font-bold text-white">GreenWave</span>
+               </div>
              </div>
            </div>
          </div>
@@ -536,136 +661,6 @@
    </div>
  </section>
 
- <!-- SECTION: BUKTI & TRANSPARANSI (TRUST SECTION) -->
- <section id="transparansi" class="reveal py-24 relative overflow-hidden">
-   <!-- Background decorative elements -->
-   <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[120px] -z-10 opacity-50"></div>
-   <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[120px] -z-10 opacity-50"></div>
-
-   <div class="max-w-7xl mx-auto px-6">
-     <div class="flex flex-col lg:flex-row gap-16 items-center">
-       <!-- Left: Live Impact Map/Log -->
-       <div class="lg:w-7/12 w-full order-2 lg:order-1">
-         <div class="relative group">
-           <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-[2.5rem] blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200"></div>
-           <div class="relative bg-navy-900 border border-white/10 rounded-[2.5rem] overflow-hidden shadow-2xl">
-             <!-- Header Map -->
-             <div class="p-6 border-b border-white/5 bg-navy-950/50 flex justify-between items-center">
-               <div class="flex items-center gap-3">
-                 <div class="w-3 h-3 rounded-full bg-red-500 animate-pulse"></div>
-                 <span class="font-mono text-xs text-slate-300 uppercase tracking-widest">Live Mission Log: Nusantara-1</span>
-               </div>
-               <span class="text-[10px] font-mono text-cyan-400">v2.4.0-Stable</span>
-             </div>
-
-             <!-- Content: Visual representation of a mission -->
-             <div class="relative h-[400px] bg-navy-950 overflow-hidden">
-               <img src="https://images.unsplash.com/photo-1551244072-5d12893278ab?q=80&w=1200" class="w-full h-full object-cover opacity-30 grayscale" alt="Marine Map">
-
-               <!-- Pulsing coordinate points -->
-               <div class="absolute top-1/4 left-1/3 group/point">
-                 <div class="w-4 h-4 bg-cyan-400 rounded-full animate-ping opacity-75"></div>
-                 <div class="absolute inset-0 w-4 h-4 bg-cyan-400 rounded-full"></div>
-                 <div class="absolute top-6 left-1/2 -translate-x-1/2 w-32 bg-navy-900/90 backdrop-blur-md border border-cyan-400/30 p-2 rounded-lg opacity-0 group-hover/point:opacity-100 transition-opacity">
-                   <p class="text-[9px] font-bold text-white mb-1">Misi: Evakuasi Jaring</p>
-                   <p class="text-[8px] text-cyan-400">Status: Selesai (1.2 Ton)</p>
-                 </div>
-               </div>
-
-               <div class="absolute bottom-1/3 right-1/4 group/point">
-                 <div class="w-4 h-4 bg-gold-400 rounded-full animate-ping opacity-75"></div>
-                 <div class="absolute inset-0 w-4 h-4 bg-gold-400 rounded-full"></div>
-                 <div class="absolute top-6 left-1/2 -translate-x-1/2 w-32 bg-navy-900/90 backdrop-blur-md border border-gold-400/30 p-2 rounded-lg opacity-0 group-hover/point:opacity-100 transition-opacity">
-                   <p class="text-[9px] font-bold text-white mb-1">Misi: Patroli Sonar</p>
-                   <p class="text-[8px] text-gold-400">Status: Berlangsung...</p>
-                 </div>
-               </div>
-
-               <!-- Floating Info Overlay -->
-               <div class="absolute bottom-6 left-6 right-6 p-4 bg-navy-900/80 backdrop-blur-md border border-white/10 rounded-2xl">
-                 <div class="grid grid-cols-3 gap-4 text-center">
-                   <div>
-                     <p class="text-[10px] text-slate-500 uppercase">Kedalaman</p>
-                     <p class="font-mono text-sm font-bold text-white">-45.2m</p>
-                   </div>
-                   <div>
-                     <p class="text-[10px] text-slate-500 uppercase">Suhu Air</p>
-                     <p class="font-mono text-sm font-bold text-white">26.8°C</p>
-                   </div>
-                   <div>
-                     <p class="text-[10px] text-slate-500 uppercase">Kandungan O2</p>
-                     <p class="font-mono text-sm font-bold text-cyan-400">Optimal</p>
-                   </div>
-                 </div>
-               </div>
-             </div>
-           </div>
-         </div>
-       </div>
-
-       <!-- Right: Partners & Certs -->
-       <div class="lg:w-5/12 w-full order-1 lg:order-2 space-y-8">
-         <div>
-           <span class="text-cyan-400 text-xs font-extrabold tracking-widest uppercase block mb-4">// LEGITIMASI OPERASIONAL</span>
-           <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white leading-tight mb-6">Transparansi Tanpa Kompromi</h2>
-           <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
-             VML beroperasi dengan standar audit internasional. Setiap rupiah donasi dan setiap gram limbah yang diangkat tercatat dalam sistem log blockchain maritim kami yang dapat diakses oleh publik.
-           </p>
-         </div>
-
-         <div class="space-y-6">
-           <div class="flex items-center gap-4 group">
-             <div class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-cyan-400 text-xl group-hover:bg-cyan-400/20 group-hover:border-cyan-400/40 transition-all">
-               <i class="fa-solid fa-shield-halved"></i>
-             </div>
-             <div>
-               <h4 class="text-white font-bold text-sm">Sertifikasi ISO 14001:2015</h4>
-               <p class="text-xs text-slate-500 italic">Standar Internasional Manajemen Lingkungan Maritim.</p>
-             </div>
-           </div>
-
-           <div class="flex items-center gap-4 group">
-             <div class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-cyan-400 text-xl group-hover:bg-cyan-400/20 group-hover:border-cyan-400/40 transition-all">
-               <i class="fa-solid fa-handshake"></i>
-             </div>
-             <div>
-               <h4 class="text-white font-bold text-sm">Mitra Strategis KKP RI</h4>
-               <p class="text-xs text-slate-500 italic">Kolaborasi pemetaan zona kritis jaring hantu nasional.</p>
-             </div>
-           </div>
-
-           <div class="flex items-center gap-4 group">
-             <div class="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-cyan-400 text-xl group-hover:bg-cyan-400/20 group-hover:border-cyan-400/40 transition-all">
-               <i class="fa-solid fa-chart-line"></i>
-             </div>
-             <div>
-               <h4 class="text-white font-bold text-sm">Audit Dampak Independen</h4>
-               <p class="text-xs text-slate-500 italic">Laporan dampak bulanan oleh firma audit lingkungan pihak ketiga.</p>
-             </div>
-           </div>
-         </div>
-
-         <div class="pt-8 border-t border-white/5">
-           <p class="text-[10px] text-slate-500 uppercase tracking-widest mb-6">Mitra & Aliansi Kami:</p>
-           <div class="grid grid-cols-3 gap-8 opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
-             <div class="flex items-center gap-2">
-                <i class="fa-solid fa-water text-2xl text-white"></i>
-                <span class="text-[10px] font-bold text-white">KKP RI</span>
-             </div>
-             <div class="flex items-center gap-2">
-                <i class="fa-solid fa-fish-fins text-2xl text-white"></i>
-                <span class="text-[10px] font-bold text-white">WWF ID</span>
-             </div>
-             <div class="flex items-center gap-2">
-                <i class="fa-solid fa-leaf text-2xl text-white"></i>
-                <span class="text-[10px] font-bold text-white">GreenWave</span>
-             </div>
-           </div>
-         </div>
-       </div>
-     </div>
-   </div>
- </section>
 
  <!-- SECTION 3: DONASI & ECO-MERCHANDISE -->
  <section id="pendanaan" class="reveal py-24 max-w-7xl mx-auto px-6">
@@ -1291,8 +1286,23 @@
    if (fish.classList.contains('hidden')) fish.classList.remove('hidden');
  });
 
+ window.addEventListener('touchmove', (e) => {
+   if (e.touches.length > 0) {
+     mouseX = e.touches[0].clientX;
+     mouseY = e.touches[0].clientY;
+     if (fish.classList.contains('hidden')) fish.classList.remove('hidden');
+   }
+ }, { passive: false });
+
+ window.addEventListener('touchstart', (e) => {
+   if (e.touches.length > 0) {
+     mouseX = e.touches[0].clientX;
+     mouseY = e.touches[0].clientY;
+     if (fish.classList.contains('hidden')) fish.classList.remove('hidden');
+   }
+ }, { passive: true });
+
  function animateCursor() {
-   if (window.innerWidth <= 768) return;
    const dx = mouseX - fishX; const dy = mouseY - fishY;
    fishX += dx * lerpSpeed; fishY += dy * lerpSpeed;
    const angle = Math.atan2(dy, dx) * (180 / Math.PI);
